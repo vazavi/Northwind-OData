@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind OData", "Northwind OData\Northwind OData.csproj", "{2FF134EE-0B69-425E-8087-41BF9A90261C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind OData Proxy", "Northwind OData Proxy\Northwind OData Proxy.csproj", "{D47E513B-9956-4A7C-845B-C582E1D8897E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{47A95A11-56E1-4E97-981D-F3B40F283C5D}"
+	ProjectSection(SolutionItems) = preProject
+		applicationHost.xdt = applicationHost.xdt
+		Azure Reverse Proxy.md = Azure Reverse Proxy.md
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2FF134EE-0B69-425E-8087-41BF9A90261C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FF134EE-0B69-425E-8087-41BF9A90261C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FF134EE-0B69-425E-8087-41BF9A90261C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FF134EE-0B69-425E-8087-41BF9A90261C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D47E513B-9956-4A7C-845B-C582E1D8897E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D47E513B-9956-4A7C-845B-C582E1D8897E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D47E513B-9956-4A7C-845B-C582E1D8897E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D47E513B-9956-4A7C-845B-C582E1D8897E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
