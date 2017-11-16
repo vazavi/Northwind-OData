@@ -1,22 +1,57 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.OData;
-
+using System.Web.OData.Extensions;
+using System.Web.OData.Query;
 using Dapper;
+using GSA.Samples.Northwind.OData.Extensions;
 using GSA.Samples.Northwind.OData.Models;
 
 namespace GSA.Samples.Northwind.OData.Controllers
 {
     public class ProductsController : BaseController<Product>
     {
-        [EnableQuery]
-        public virtual async Task<IHttpActionResult> Get()
+        private static readonly int _defaultPageSize = 50;
+
+        public virtual async Task<IHttpActionResult> Get(ODataQueryOptions<Product> queryOptions)
         {
-            return Ok(await Db.GetListAsync<Product>());
+            int page, pageSize;
+            queryOptions.GetPagingOptions(out page, out pageSize, _defaultPageSize);
+
+            // executing two queries at once in order to return total count and results 
+            // using one database query 
+            var sql = @"SELECT COUNT(1) FROM [Products];
+                        SELECT * FROM 
+                        (
+                            SELECT 
+                                ROW_NUMBER() OVER(ORDER BY ProductUniqueID DESC) AS PagedNumber, 
+                                [ProductUniqueID] as [ID],
+                                [ProductName],
+                                [UnitPrice]
+                            FROM [Products] 
+                        ) AS u 
+                        WHERE PagedNUMBER BETWEEN ((@Page-1) * @PageSize + 1) AND (@Page * @PageSize)";
+
+            var results = await Db.QueryMultipleAsync(sql, new DynamicParameters(new Dictionary<string, object>
+            {
+                { "@Page", page },
+                { "@PageSize", pageSize }
+            }));
+
+            var totalCount = results.Read<int>().Single();
+            var products = results.Read<Product>().ToList();
+
+            var pagedResult = new PageResult<Product>(
+                products,
+                Request.GetNextPageLink(pageSize),
+                totalCount);
+
+            return Ok(pagedResult);
         }
 
         [EnableQuery]
