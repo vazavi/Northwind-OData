@@ -18,5 +18,10 @@ namespace GSA.Samples.Northwind.OData.Models
         public string ProductName { get; set; }
 
         public decimal UnitPrice { get; set; }
+
+        [Required]
+        public Guid ReferenceUniqueID { get; set; }
+
+        public string ProductUri { get; set; }
     }
 }
