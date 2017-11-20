@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using GSA.Samples.Northwind.OData.Model;
 
 namespace GSA.Samples.Northwind.OData.Models
 {

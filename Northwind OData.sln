@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind OData Dapper", "N
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind OData EF", "Northwind OData EF\Northwind OData EF.csproj", "{94C25CB7-27DA-4F27-BEAE-BCC3ACB9BCC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind OData Model", "Northwind OData Model\Northwind OData Model.csproj", "{64479B1A-F71D-4F8A-9D7F-BA032E5930F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{94C25CB7-27DA-4F27-BEAE-BCC3ACB9BCC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94C25CB7-27DA-4F27-BEAE-BCC3ACB9BCC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94C25CB7-27DA-4F27-BEAE-BCC3ACB9BCC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64479B1A-F71D-4F8A-9D7F-BA032E5930F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64479B1A-F71D-4F8A-9D7F-BA032E5930F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64479B1A-F71D-4F8A-9D7F-BA032E5930F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64479B1A-F71D-4F8A-9D7F-BA032E5930F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

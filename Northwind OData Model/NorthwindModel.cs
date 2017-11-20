@@ -1,7 +1,8 @@
-﻿using Microsoft.OData.Edm;
-using System.Web.OData.Builder;
+﻿using System.Web.OData.Builder;
+using GSA.Samples.Northwind.OData.Models;
+using Microsoft.OData.Edm;
 
-namespace GSA.Samples.Northwind.OData.Models
+namespace GSA.Samples.Northwind.OData.Model
 {
     public class NorthwindModel
     {
