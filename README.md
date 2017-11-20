@@ -1,6 +1,13 @@
 ﻿# Northwind OData
 
-A sample OData service for Northwind database.
+Exploring what it takes to expose a MS-SQL database as an OData Service.
+
+Two parallel implementations use Microsoft.OData and either EF or Dapper.
+
+Note: The Dapper implementation is not as complete as the EF one and serves to demonstrate that while other technologies can be used it takes almost no effort when EF is used.
+
+### Change log
 
 - Only the Products table is supported now.
-- A new column named ProductUniqueID, of type uniqueidentifier, was added (Required by Dynamics 365 OData Sources).
+- Added new column named ProductUniqueID of type uniqueidentifier (Required by Dynamics 365 OData Sources).
+- Added new columns ReferenceUniqueID and ProductUri to test Dynamics 365 Virtual Entities.
