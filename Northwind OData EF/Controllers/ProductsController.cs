@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Web.Http;
 using System.Web.OData;
-using GSA.Samples.Northwind.OData.Models;
+using GSA.Samples.Northwind.OData.Model;
 
 namespace GSA.Samples.Northwind.OData.Controllers
 {
