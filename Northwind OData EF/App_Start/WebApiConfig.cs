@@ -1,9 +1,9 @@
 ﻿using System.Web.Http;
 using System.Web.OData.Extensions;
-using GSA.Samples.Northwind.OData.Models;
+using GSA.Samples.Northwind.OData.Model;
 using TraceLevel = System.Web.Http.Tracing.TraceLevel;
 
-namespace GSA.Samples.Northwind.OData.App_Start
+namespace GSA.Samples.Northwind.OData
 {
     public static class WebApiConfig
     {

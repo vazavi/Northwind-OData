@@ -10,7 +10,7 @@ using System.Web.OData.Extensions;
 using System.Web.OData.Query;
 using Dapper;
 using GSA.Samples.Northwind.OData.Extensions;
-using GSA.Samples.Northwind.OData.Models;
+using GSA.Samples.Northwind.OData.Model;
 
 namespace GSA.Samples.Northwind.OData.Controllers
 {
@@ -32,7 +32,9 @@ namespace GSA.Samples.Northwind.OData.Controllers
                                 ROW_NUMBER() OVER(ORDER BY ProductUniqueID DESC) AS PagedNumber, 
                                 [ProductUniqueID] as [ID],
                                 [ProductName],
-                                [UnitPrice]
+                                [UnitPrice],
+                                [ReferenceUniqueID],
+                                [ProductUri]
                             FROM [Products] 
                         ) AS u 
                         WHERE PagedNUMBER BETWEEN ((@Page-1) * @PageSize + 1) AND (@Page * @PageSize)";
