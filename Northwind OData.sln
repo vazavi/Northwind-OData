@@ -22,7 +22,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{0534A8B5-D749-47D8-BA38-7C58EB6F4D52}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind Breeze Sharp Client", "Northwind Breeze Client\Northwind Breeze Sharp Client.csproj", "{AC2162D9-3D09-4DC2-B109-3963BF5CC2E3}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind OData Model", "Northwind OData Model\Northwind OData Model.csproj", "{64479B1A-F71D-4F8A-9D7F-BA032E5930F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind OData EF Client", "Northwind OData EF Client\Northwind OData EF Client.csproj", "{FB869D28-11A5-4475-95F8-88F615C5D359}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,12 +57,17 @@ Global
 		{64479B1A-F71D-4F8A-9D7F-BA032E5930F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64479B1A-F71D-4F8A-9D7F-BA032E5930F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64479B1A-F71D-4F8A-9D7F-BA032E5930F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB869D28-11A5-4475-95F8-88F615C5D359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB869D28-11A5-4475-95F8-88F615C5D359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB869D28-11A5-4475-95F8-88F615C5D359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB869D28-11A5-4475-95F8-88F615C5D359}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{AC2162D9-3D09-4DC2-B109-3963BF5CC2E3} = {0534A8B5-D749-47D8-BA38-7C58EB6F4D52}
+		{FB869D28-11A5-4475-95F8-88F615C5D359} = {0534A8B5-D749-47D8-BA38-7C58EB6F4D52}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6CE37FC2-6431-46BA-B2D0-66ACA34B275C}

@@ -135,6 +135,7 @@ namespace Northwind_Breeze_Client
             var query = new EntityQuery<Product>().Where(i=>i.ProductName.StartsWith("A")).InlineCount();
 
             // Handle async Task results explicitly
+            
             await entityManager.ExecuteQuery(query).ContinueWith(task =>
             {
                 if (task.IsFaulted)

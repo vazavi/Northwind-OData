@@ -25,7 +25,7 @@ namespace Northwind_OData_Breeze.Controllers
         }
 
         // ~/breeze/Northwind/Products
-        // ~/breeze/Northwind/Products?$filter=IsArchived eq false&$orderby=CreatedAt 
+        // ~/breeze/Northwind/Products?$filter=startswith(ProductName,'A')&$inlinecount=allpages
         [HttpGet]
         public IQueryable<Product> Products()
         {
